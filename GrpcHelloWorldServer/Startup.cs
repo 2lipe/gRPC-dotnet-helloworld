@@ -33,7 +33,6 @@ namespace GrpcHelloWorldServer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<HelloWorldService>();
-                endpoints.MapGet("/", async context => { await context.Response.WriteAsync("Hello World!"); });
             });
         }
     }
